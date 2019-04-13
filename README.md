@@ -12,9 +12,9 @@ Show XP/Hour and other details
 ## Config
 ```
 enabled (Start module on launch)
-showMessage (Get message about current XP/Hour when XP is gained)
+showMessage (Show current XP/Hour when XP is gained)
 unitInMillions (Show XP in Millions. "3M" intead of "3000000")
 commaSeparators ("3,000,000" instead of "3000000"
 ```
 
-![Screenshot](http://i.imgur.com/bOSA6Lx.jpg)
+![Screenshot](https://i.imgur.com/nbBAqXD.png)

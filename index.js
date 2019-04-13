@@ -79,12 +79,15 @@ module.exports = function XpInfo(mod) {
         
         mod.command.message("XP/Hour: ".clr("FDD017") + formatXp(xpPerHour()).toString().clr("00FFFF"));
         mod.command.message("XP gained: ".clr("FDD017") + formatXp(getTotalXp()).clr("00FFFF"));
-        mod.command.message("Total Avg: ".clr("FDD017") + formatXp(getTotalXp() / ((Date.now() - startTime) / 3600000)).clr("00FFFF"));
+        
+        if (startTime - (Date.now() - 3600000) < 0) {
+            mod.command.message("Total Avg: ".clr("FDD017") + formatXp(getTotalXp() / ((Date.now() - startTime) / 3600000)).clr("00FFFF"));
+        }
         mod.command.message("Session playtime: ".clr("FDD017") + msToTime(Date.now() - startTime).clr("56B4E9"));     
         if (playerExp) {
             let remainingXp = Number(playerExp.nextLevelEXP - playerExp.levelEXP);
             mod.command.message("Remaining XP: ".clr("FDD017") + formatXp(remainingXp).clr("00FFFF"));
-            mod.command.message("ETA until Level: ".clr("FDD017") + msToTime(remainingXp / xpPerHour() * 3600000).clr("56B4E9") + "           Hours: " +(remainingXp / getXpPastHour() * 3600000)   );
+            mod.command.message("ETA until Level: ".clr("FDD017") + msToTime(remainingXp / xpPerHour() * 3600000).clr("56B4E9"));
         }
     });
     

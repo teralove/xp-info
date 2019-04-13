@@ -1,5 +1,5 @@
 {
-    "disableAutoUpdate": true,
+    "disableAutoUpdate": false,
     "name": "xp-info",
     "author": "teralove",
     "description": "Show XP/Hour and other details",
