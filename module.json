@@ -1,0 +1,15 @@
+{
+    "disableAutoUpdate": true,
+    "name": "xp-info",
+    "author": "teralove",
+    "description": "Show XP/Hour and other details",
+    "version": "4/13/2019", 
+    "options": {
+        "niceName": "XP Info",
+        "settingsVersion": 1,
+        "settingsFile": "config.json",
+        "settingsMigrator": "settings_migrator.js"    
+    },
+    "servers": ["https://raw.githubusercontent.com/teralove/xp-info/master/"],
+    "supportUrl": "https://github.com/teralove/xp-info/issues"
+}

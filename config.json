@@ -1,0 +1,9 @@
+{
+    "version": 1,
+    "data": {
+        "enabled": true,
+        "showMessage": true,
+        "unitInMillions": true,
+        "commaSeparators": true
+    }
+}

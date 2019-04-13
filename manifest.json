@@ -1,0 +1,14 @@
+{
+    "files": {
+        "config.json": {
+            "overwrite": false,
+            "hash": "4afc2fb2c1644c13872f46b1a4b892395609108e2fa94db533a57bfa5eeba12e"
+        },
+        "index.js": "4f361e2521d9074f4b0aefd0b74b8b492170a510854b8cae4faf3ddcacfadd8f",
+        "module.json": "5b8e4e2db381325b3d5db530ab05af1a2c9db4c6ac3cb0e476148c477a139620",
+		"settings_migrator.js": "ebf3fae217c6960d627876418497277716189660655ede4552beefb2807771d6"
+    },
+    "defs": {
+        "S_PLAYER_CHANGE_EXP": 1
+    }
+}
