@@ -4,8 +4,8 @@
             "overwrite": false,
             "hash": "c096eb49d5b446086797cb54ecd5041c9d1c405091bfccfc4d6d878a01efbc69"
         },
-        "index.js": "49f0dda8ba5874bf9fe6d536991a035447dd0727699d574d4b47bd1d6141c8d3",
-        "module.json": "661f258d3accd724a43d12733276224edafeb89c6c5e56082ff2ee8d3c59bbf8",
+        "index.js": "e33dace9d9ce3a259033507adc101ecd16685dd2d9f8abc3a503d00499c5e64d",
+        "module.json": "3d51fbdb9d9db8ab97da1a40a86a93a0ac55d5692e7573a27e26201ff4942b5b",
 		"settings_migrator.js": "89333753d6c7728035c03231b85cdd78479c6d58e092c22ab80e87dd42b03643"
     },
     "defs": {
