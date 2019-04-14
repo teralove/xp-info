@@ -1,15 +1,15 @@
 {
     "disableAutoUpdate": false,
     "name": "xp-info",
-    "author": "teralove",
+    "author": "teralove/TerableCoder",
     "description": "Show XP/Hour and other details",
-    "version": "4/13/2019", 
+    "version": "4/14/2019", 
     "options": {
         "niceName": "XP Info",
         "settingsVersion": 1,
         "settingsFile": "config.json",
         "settingsMigrator": "settings_migrator.js"    
     },
-    "servers": ["https://raw.githubusercontent.com/teralove/xp-info/master/"],
-    "supportUrl": "https://github.com/teralove/xp-info/issues"
+    "servers": ["https://raw.githubusercontent.com/TerableCoder/xp-info/master/"],
+    "supportUrl": "https://github.com/TerableCoder/xp-info/issues"
 }
