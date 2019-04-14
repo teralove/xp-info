@@ -32,7 +32,8 @@ module.exports = function XpInfo(mod) {
     }
  
     function xpPerHour() {
-        return getXpPastHour() / ((Date.now() - startTime) / 3600000);
+		let timePassed = Date.now() - startTime;
+		return getXpPastHour() * 3600000 / (timePassed < 3600000 ? timePassed : 3600000);
     }
     
     function resetMod() {
