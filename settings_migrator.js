@@ -3,7 +3,7 @@
 const DefaultSettings = {
     "enabled": true,
     "showMessage": true,
-    "unitInMillions": true,
+    "shortUnits": true,
     "commaSeparators": true
 }
 

@@ -6,14 +6,14 @@ Show XP/Hour and other details
 - Output XP information
 ### `xp [on/off]`
 - Enable/disable module
-### `xp reset`
+### `xp [reset]`
 - Reset current session's progress
 
 ## Config
 ```
 enabled (Start module on launch)
 showMessage (Show current XP/Hour when XP is gained)
-unitInMillions (Show XP in Millions. "3M" intead of "3000000")
+shortUnits (Show XP in units. "3M" intead of "3000000")
 commaSeparators ("3,000,000" instead of "3000000"
 ```
 

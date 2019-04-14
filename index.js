@@ -17,22 +17,18 @@ module.exports = function XpInfo(mod) {
     })
 
    function getTotalXp() {
-        let result = 0;
-        
-        for(let i = 0; i < xp.length; i++) {
-            result += xp[i].gained;
-        }
-        return result;
+        let xpFarmed = 0;
+        xp.forEach(p => xpFarmed += p.gained)
+
+        return xpFarmed;
     }
     
     function getXpPastHour() {
         let xpPastHour = xp.filter(p => p.time - (Date.now() - 3600000) > 0);
-        let result = 0;
+        let xpFarmed = 0;
+        xpPastHour.forEach(p => xpFarmed += p.gained)
         
-        for(let i = 0; i < xpPastHour.length; i++) {
-            result += xpPastHour[i].gained;
-        }
-        return result;
+        return xpFarmed;
     }
  
     function xpPerHour() {
@@ -67,14 +63,6 @@ module.exports = function XpInfo(mod) {
                 mod.settings.enabled = false;
                 mod.command.message("Disabled".clr('E69F00'));
                 return;
-            case "showmessage":
-                mod.settings.showMessage = true;
-                mod.command.message("Disabled".clr('56B4E9'));
-                return;
-            case "hidemessage":
-                mod.settings.showMessage = false;
-                mod.command.message("Disabled".clr('E69F00'));
-                return;
         }
         
         mod.command.message("XP/Hour: ".clr("FDD017") + formatXp(xpPerHour()).toString().clr("00FFFF"));
@@ -92,9 +80,33 @@ module.exports = function XpInfo(mod) {
     });
     
     function formatXp(xpValue) {
-        let format = Number(mod.settings.unitInMillions ? (xpValue * 0.000001).toFixed(2) : xpValue.toFixed());        
+        let format;
+        
+        if (mod.settings.shortUnits) {
+            if (xpValue >= 1000000000) {
+                format = xpValue * 0.000000001;
+            } else if (xpValue >= 1000000) {
+                format = xpValue * 0.000001;             
+            } else if (xpValue >= 1000) {                
+                format = xpValue * 0.001;
+            } else {
+                format = xpValue.toFixed();           
+            }            
+        } else {
+            format = xpValue.toFixed();
+        }
+        
         if (mod.settings.commaSeparators) format = format.toLocaleString('en');        
-        if (mod.settings.unitInMillions) format += "M";
+            
+        if (mod.settings.shortUnits) {
+            if (xpValue >= 1000000000) {
+                format += "B";
+            } else if (xpValue >= 1000000) {
+                format += "M";             
+            } else if (xpValue >= 1000) {                
+                format += "K";
+            }           
+        }
         
         if (playerExp) {
             format += " (" + (xpValue / Number(playerExp.nextLevelEXP) * 100).toFixed(2) + "%)";
